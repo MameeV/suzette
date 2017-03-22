@@ -21,7 +21,10 @@ export default class Home extends React.PureComponent {
       background: "#FAE0EE",
       display: "flex",
       flexDirection: "row",
-      fontFamily:"Merriweather"
+      fontFamily:"Raleway",
+      fontWeight:"Bold",
+      color: "#3E262A",
+      fontSize: "48px"
     }
     const titleSize={
       width: "100vh",
@@ -35,21 +38,29 @@ export default class Home extends React.PureComponent {
     const bodyStyle={
       width: "90%",
       height: "100vh",
-      background: "#FAE0EE"
+      background: "#FAE0EE",
+      fontFamily: "Josefin Slab",
+      fontWeight: "Bold",
+      fontSize: "20px",
+      color: "#3E262A"
     }
     const mainStyle={
       display: "flex",
       flexDirection: "row"
     }
     const footerStyle={
-      width: "100%",
-      height: "20px",
-      background: "#74D1EA"
+      background: "#74D1EA",
+      position: "fixed",
+      bottom: "10px",
+      right: "10px",
+      padding: "15px",
+      borderRadius: "50px"
     }
     const animeStyle={
       borderRadius: "50%",
       width: "100px",
-      height: "100px"
+      height: "100px",
+      margin: "3px"
     }
     const mainphotoStyle={
       borderRadius: "2%",
@@ -57,14 +68,30 @@ export default class Home extends React.PureComponent {
       height: "300px",
       margin: "15px"
     }
+    const headingStyle={
+      margin: "15px"
+    }
+    const indentStyle={
+      margin: "15px"
+    }
+    const linkStyle={
+      textDecoration: "none",
+      fontFamily: "Raleway",
+      fontWeight: "Medium",
+      fontSize: "20px",
+      color: "#ffffff",
+      display: "block",
+      margin: "20px",
+      paddingTop: "10px"
+    }
     return (
       <div>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
         <header>
         <span style={titleStyle}>
             <img style={animeStyle} src="http://h4z.it/Image/7a075b_IMG_0630.JPG"/>
-          <div>
-            Hello World! My Name is Suzette
+          <div style={headingStyle}>
+            Hello World!
           </div>
         </span>
         </header>
@@ -72,23 +99,22 @@ export default class Home extends React.PureComponent {
           <div style={sideStyle}>
           <nav>
             <div>
-            <Link to="/"> Home </Link>
+            <Link style={linkStyle} to="/"> Home </Link>
+            <Link style={linkStyle} to="/about"> About </Link>
+            <Link style={linkStyle} to="/links"> Links </Link>
             </div>
-            <Link to="/about"> About </Link>
           </nav>
           </div>
           <div style={bodyStyle}>
-            <div>
-              Creating my first personal website
+            <div style={indentStyle}>
+              My name is Suzette. I am creating my first personal website. a;dlsfkja;lsdkfja;ldjsdsfkjahdfsoijaewrj;ldasfj;dkas;lasdkjfkldasfj;ldjesdka s;ldkjsf;larjegnfadkijbhvs oikdfjrtga;lsnjbdvklndp;fsgkjaosijtgfa;lbja;dfo;airjet klna;lnstg;ldksgfj;aldskjbvaspoi. rajt;lasdmkftgp;asdlkrftmgtasdreoijasd;lknhbspoijaswkldfjg;lmnboiretnja;ldkfgmnjklcvmspo;rgfim
             </div>
             <img style={mainphotoStyle}
             src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
           </div>
         </main>
         <footer style={footerStyle}>
-            <div>
-              Created by Suzette Verbeck
-            </div>
+              Contact
         </footer>
       </div>
     );

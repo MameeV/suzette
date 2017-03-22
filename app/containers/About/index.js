@@ -18,7 +18,7 @@ export default class About extends React.PureComponent {
         <nav>
           <Link to="/"> Home </Link>
         </nav>
-        <main>Backgroup copy</main>
+        <main>Background copy</main>
         <footer>me</footer>
 
       </div>

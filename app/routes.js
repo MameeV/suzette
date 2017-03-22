@@ -34,6 +34,16 @@ export default function createRoutes() {
           },
         },
 
+      {
+          path: '/links',
+          name: 'Links',
+          getComponent(nextState, cb) {
+            import('containers/Links')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+
      {
       path: '*',
       name: 'notfound',
