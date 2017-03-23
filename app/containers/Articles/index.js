@@ -1,6 +1,6 @@
 /*
  *
- * Links
+ * About
  *
  */
 
@@ -8,7 +8,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from "react-router";
 
-export default class Links extends React.PureComponent {
+export default class Articles extends React.PureComponent {
   render() {
   const footerStyle={
     background: "#74D1EA",
@@ -20,18 +20,18 @@ export default class Links extends React.PureComponent {
   }
     return (
       <div>
-        <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
+        <Helmet title="Articles" meta={[ { name: 'description', content: 'Description of Articles' }]}/>
 
-        <header>Check Out These Resource Links!</header>
+        <header>Articles</header>
         <nav>
           <Link to="/"> Home </Link>
         <br/>
-          <Link to="/articles"> Articles </Link>
+          <Link to="/links"> Links </Link>
         </nav>
         <main></main>
 
         <footer style={footerStyle}>
-          Message Me!
+              Message Me!
         </footer>
 
       </div>

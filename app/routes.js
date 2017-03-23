@@ -25,10 +25,10 @@ export default function createRoutes() {
       },
 
       {
-          path: '/about',
-          name: 'About',
+          path: '/articles',
+          name: 'Articles',
           getComponent(nextState, cb) {
-            import('containers/About')
+            import('containers/Articles')
               .then(loadModule(cb))
               .catch(errorLoading);
           },
