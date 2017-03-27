@@ -16,6 +16,7 @@ import MessageButton from 'components/MessageButton';
 import NavBar from 'components/NavBar';
 import NavMobile from 'components/NavMobile';
 
+
 export default class Home extends React.PureComponent {
 
   render() {
@@ -40,7 +41,7 @@ export default class Home extends React.PureComponent {
       height: "60px"
     }
     const bodyStyle={
-      width: "88%",
+      width: "89%",
       height: "100vh",
       background: "#FAE0EE",
       fontFamily: "Josefin Slab",
