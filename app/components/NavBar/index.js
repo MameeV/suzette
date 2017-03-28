@@ -36,11 +36,11 @@ class NavBar extends React.PureComponent {
       fontFamily: "Raleway",
       fontWeight: "Medium",
       fontSize: "20px",
-      color: "#ffffff",
+      color: "#3E262A",
       display: "block",
       paddingTop: "100px",
       paddingLeft: "15px",
-      background: "#ff00ff"
+
     }
     if(this.state.active==1){
       return(

@@ -4,62 +4,70 @@
  *
  */
 
-import React from 'react';
-import Helmet from 'react-helmet';
-import {Link} from "react-router";
-import NavBar from 'components/NavBar';
-import MessageButton from 'components/MessageButton';
-import Head2 from 'components/Head2';
-import Responsive from 'react-responsive';
+ import React from 'react';
+ import Helmet from 'react-helmet';
+ import {Link} from "react-router";
+ import NavMobile from 'components/NavMobile';
+ import MessageButton from 'components/MessageButton';
 
-export default class Links extends React.PureComponent {
-  render() {
-  const footerStyle={
-    background: "#74D1EA",
-    position: "fixed",
-    bottom: "10px",
-    right: "10px",
-    padding: "15px",
-    borderRadius: "50px"
-  }
-    return (
-      <div>
-        <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
-      <Head2 title="My Links"/>
-      <NavBar/>
+ export default class Articles extends React.PureComponent {
+   render() {
+   const footerStyle={
+     background: "#74D1EA",
+     position: "fixed",
+     bottom: "10px",
+     right: "10px",
+     padding: "15px",
+     borderRadius: "50px"
+   }
+   const body2Style={
+     width: "100%",
+     height: "100vh",
+     background: "#FAE0EE",
+     fontFamily: "Raleway",
+     fontWeight: "Bold",
+     fontSize: "20px",
+     color: "#3E262A",
+     paddingTop: "30px",
+     paddingLeft: "25px"
+   }
 
-      <Responsive minDeviceWidth={1024}>
-        <main style={mainStyle}>
-          <NavBar/>
-          <div style={bodyStyle}>
-            <div style={indentStyle}>
-              My name is Suzette. I am a wife (of 28 years), mother (for 2 adult sons), registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our Augusta, GA community. Professionally I am working to help improve healthcare.
-            <br/>
-              <img style={mainphotoStyle} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
-            <br/>
-              Here is a photo I took on the bank of the Savannah River during a Sunday afternoon bike ride.
-            </div>
-          </div>
-        </main>
-      </Responsive>
-
-      <Responsive maxDeviceWidth={1023}>
-        <NavMobile/>
-        <main style={mainStyle}>
-          <div style={bodyStyleMobile}>
-            <div style={indentStyle}>
-              My name is Suzette. I am a wife (of 28 years), mother (for 2 adult sons), registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our Augusta, GA community. Professionally I am working to help improve healthcare.
-            <br/>
-              <img style={mainphotoStyleMobile} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
-            <br/>
-              Here is a photo I took on the bank of the Savannah River during a Sunday afternoon bike ride.
-            </div>
-          </div>
-        </main>
-      </Responsive>
-
-      <MessageButton/>
-      </div>
+   const headTextStyle={
+     width: "100%",
+     height: "80px",
+     top: "auto",
+     borderTop:"3px solid #74D1EA",
+     borderBottom:"3px solid #74D1EA",
+     background: "#FAE0EE",
+     display: "flex",
+     flexDirection: "row",
+     justifyContent: "center",
+     fontFamily: "Fredericka the Great",
+     fontStyle: "cursive",
+     fontWeight: "bold",
+     fontSize: "40px",
+     color: "#3E262A",
+     textTransform: "uppercase",
+     textAlign: "center",
+     paddingTop: "10px"
+   }
+   const indentStyle={
+     margin: "15px"
+   }
+   return (
+     <div>
+       <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
+       <div style={headTextStyle}>
+         Resource Links
+       </div>
+       <main>
+         <NavMobile active={3}/>
+         <div style={body2Style}>
+           Enter links & text here.
+         </div>
+         <MessageButton/>
+       </main>
+     </div>
     );
   }
 }

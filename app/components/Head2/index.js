@@ -23,17 +23,15 @@ class Head2 extends React.PureComponent {
   }
   render() {
     const heading2Style={
-      width: "100vh",
+      width: "100%",
       height: "80px",
-      position: "fixed",
       top: "auto",
       borderTop:"3px solid #74D1EA",
       borderBottom:"3px solid #74D1EA",
       background: "#FAE0EE",
       display: "flex",
       flexDirection: "row",
-      textTransform: "uppercase",
-      textAlign: "center"
+      justifyContent: "center",
     }
 
     return (

@@ -16,7 +16,7 @@ class NavMobile extends React.PureComponent {
     super(props);
     this.state={
       menuOpen: false,
-      activeItem:0
+
     }
   }
 
@@ -25,10 +25,7 @@ class NavMobile extends React.PureComponent {
       menuOpen: true
     })
   }
-  render() {
-    const topBurger={
-      background: "#B4938C"
-    }
+  showMenu=()=>{
     const linkStyleMobile={
       background: "#FAE0EE",
       textDecoration: "none",
@@ -37,6 +34,65 @@ class NavMobile extends React.PureComponent {
       fontSize: "100%",
       color: "#B4938C",
     }
+    const activeStyleMobile={
+      background: "#FAE0EE",
+      textDecoration: "underline",
+      fontFamily: "Raleway",
+      fontWeight: "Bold",
+      fontSize: "100%",
+      color: "#B4938C",
+    }
+    if(this.props.active==1){
+      return(
+        <div>
+        <MenuItem>
+          <Link style={activeStyleMobile} to="/"> Home </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/articles"> Articles </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/links"> Links </Link>
+        </MenuItem>
+        </div>
+      )
+    }
+    else if(this.props.active==2){
+      return(
+        <div>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/"> Home </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={activeStyleMobile} to="/articles"> Articles </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/links"> Links </Link>
+        </MenuItem>
+        </div>
+      )
+    }
+    else if(this.props.active==3){
+      return(
+        <div>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/"> Home </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/articles"> Articles </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={activeStyleMobile} to="/links"> Links </Link>
+        </MenuItem>
+        </div>
+      )
+    }
+  }
+  render() {
+    const topBurger={
+      background: "#B4938C"
+    }
+
     const drawerStyle={
       background: "#FAE0EE"
     }
@@ -53,15 +109,7 @@ class NavMobile extends React.PureComponent {
           open={this.state.menuOpen}
           onRequestChange={(menuOpen) => this.setState({menuOpen})}
         >
-          <MenuItem>
-            <Link style={linkStyleMobile} to="/"> Home </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link style={linkStyleMobile} to="/articles"> Articles </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link style={linkStyleMobile} to="/links"> Links </Link>
-          </MenuItem>
+          {this.showMenu()}
         </Drawer>
         </nav>
       </div>

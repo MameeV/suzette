@@ -117,7 +117,9 @@ export default class Home extends React.PureComponent {
         </Responsive>
 
         <Responsive maxDeviceWidth={1023}>
-          <NavMobile/>
+
+          <NavMobile active={1}/>
+
           <main style={mainStyle}>
             <div style={bodyStyleMobile}>
               <div style={indentStyle}>

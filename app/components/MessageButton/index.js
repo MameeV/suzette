@@ -58,7 +58,7 @@ class MessageButton extends React.PureComponent {
         <footer style={footerStyle}>
           <FlatButton style={buttonStyle} label="Message Me!" onTouchTap={this.handleOpen}/>
         </footer>
-        <Dialog titleStyle={messageBoxStyle} title="Send me a message and I will reply to your eMail." actions={actions} open={this.state.contactOpen}>
+        <Dialog titleStyle={messageBoxStyle} title="Send me a message. I look forward to hearing from you." actions={actions} open={this.state.contactOpen}>
         <br/>
         <TextField hintText="Enter your eMail address here."/>
         <br/>
