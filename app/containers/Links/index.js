@@ -54,6 +54,35 @@
    const indentStyle={
      margin: "15px"
    }
+   const resourceContainer={
+     display: "flex",
+     flexDirection: "row",
+     flexWrap: "wrap",
+     width: "100%",
+     maxWidth: "1000px",
+     justifyContent: "space-around",
+     paddingTop: "10px",
+   }
+   const resource={
+     width: "25%",
+     display: "flex",
+     flexDirection: "column"
+   }
+   const resourceImage={
+     width: "100%",
+     height: "300px",
+     background: "#333333"
+   }
+   const resourceTitle={
+     width: "100%",
+     height: "100px",
+     background: "#555555"
+   }
+   const resourceBody={
+     width: "100%",
+     height: "100px",
+     background: "#777777"
+   }
    return (
      <div>
        <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
@@ -62,9 +91,19 @@
        </div>
        <main>
          <NavMobile active={3}/>
-         <div style={body2Style}>
-           Enter links & text here.
-         </div>
+           <div style={resourceContainer}>
+             <div style={resource}>
+               <div style={resourceImage}>
+               Image Tag for Resource
+               </div>
+               <div style={resourceTitle}>
+               Resource Title
+               </div>
+               <div style={resourceBody}>
+               Resource Highlight Copy
+               </div>
+             </div>
+           </div>
          <MessageButton/>
        </main>
      </div>
