@@ -61,6 +61,7 @@
      width: "100%",
      maxWidth: "1000px",
      justifyContent: "space-around",
+     background: "#FAE0EE",
      paddingTop: "10px",
    }
    const resource={
@@ -70,18 +71,50 @@
    }
    const resourceImage={
      width: "100%",
-     height: "300px",
+     height: "150px",
      background: "#333333"
    }
    const resourceTitle={
      width: "100%",
-     height: "100px",
-     background: "#555555"
+     height: "120px",
+     background: "#555555",
+     fontFamily:"Raleway",
+     fontWeight:"Bold",
+     fontSize: "20px",
+     color: "#3E262A",
+     textShadow: "2px 5px 15px #74D1EA",
+     display: "flex",
+     flexDirection: "row",
+     justifyContent: "center",
+     textAlign: "center",
+     textOverflow: "ellipsis",
+     paddingTop: "15px",
+     paddingLeft: "15px",
+     paddingRight: "15px"
    }
    const resourceBody={
      width: "100%",
-     height: "100px",
-     background: "#777777"
+     height: "80px",
+     background: "#777777",
+     maxHeight: "100px",
+     fontFamily:"Raleway",
+     fontWeight:"Medium",
+     fontSize: "16px",
+     color: "#3E262A",
+     textAlign: "center",
+     paddingTop: "20px",
+     paddingLeft: "35px",
+     paddingRight: "35px",
+     marginBottom: "35px"
+   }
+   const arrowStyle={
+     fontSize: "1.5em",
+     color: "#74D1EA",
+     paddingTop: "30px"
+   }
+   const imageStyle={
+     width: "100%",
+     height: "auto"
    }
    return (
      <div>
@@ -94,16 +127,29 @@
            <div style={resourceContainer}>
              <div style={resource}>
                <div style={resourceImage}>
-               Image Tag for Resource
+               Image for Resource
                </div>
                <div style={resourceTitle}>
-               Resource Title
+               Learn more about Xxxxxxxx Xxxxxxxx at this website
                </div>
                <div style={resourceBody}>
-               Resource Highlight Copy
+               Go To Website <span style={arrowStyle}> &#10173; </span>
                </div>
              </div>
            </div>
+
+           <div style={resourceContainer}>
+             <div style={resource}>
+               <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
+               <div style={resourceTitle}>
+               Vist my Medical Advocacy Partners website!
+               </div>
+               <div style={resourceBody}>
+               Go To Website <span style={arrowStyle}> &#10173; </span>
+               </div>
+             </div>
+           </div>
+
          <MessageButton/>
        </main>
      </div>
