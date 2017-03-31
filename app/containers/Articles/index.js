@@ -117,18 +117,17 @@ export default class Articles extends React.PureComponent {
     height: "300px",
     maxHeight: "300px",
     overflow: "hidden",
-    borderRadius: "2%",
     paddingTop: "20px",
     paddingLeft: "10px",
     paddingRight: "10px"
   }
-
   const imgStyle={
     width: "100%",
     height: "auto"
   }
   const articleTitle={
     width: "100%",
+    height: "auto",
     fontFamily:"Raleway",
     fontWeight:"Bold",
     fontSize: "20px",

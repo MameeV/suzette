@@ -9,6 +9,7 @@
  import {Link} from "react-router";
  import NavMobile from 'components/NavMobile';
  import MessageButton from 'components/MessageButton';
+ import Responsive from 'react-responsive';
 
  export default class Articles extends React.PureComponent {
    render() {
@@ -31,7 +32,6 @@
      paddingTop: "30px",
      paddingLeft: "25px"
    }
-
    const headTextStyle={
      width: "100%",
      height: "80px",
@@ -62,22 +62,31 @@
      maxWidth: "1000px",
      justifyContent: "space-around",
      background: "#FAE0EE",
-     paddingTop: "10px",
+     margin: "0 auto",
+   }
+   const resourceContainerMobile={
+     display: "flex",
+     flexDirection: "column",
+     width: "100%",
+     background: "#FAE0EE"
    }
    const resource={
      width: "25%",
      display: "flex",
      flexDirection: "column"
    }
+   const resourceMobile={
+     width: "100%",
+     display: "flex",
+     flexDirection: "column"
+   }
    const resourceImage={
      width: "100%",
-     height: "150px",
-     background: "#333333"
+     height: "auto"
    }
    const resourceTitle={
      width: "100%",
      height: "120px",
-     background: "#555555",
      fontFamily:"Raleway",
      fontWeight:"Bold",
      fontSize: "20px",
@@ -95,7 +104,6 @@
    const resourceBody={
      width: "100%",
      height: "80px",
-     background: "#777777",
      maxHeight: "100px",
      fontFamily:"Raleway",
      fontWeight:"Medium",
@@ -122,6 +130,8 @@
        <div style={headTextStyle}>
          Resource Links
        </div>
+
+
        <main>
          <NavMobile active={3}/>
            <div style={resourceContainer}>
@@ -136,16 +146,25 @@
                Go To Website <span style={arrowStyle}> &#10173; </span>
                </div>
              </div>
-           </div>
 
-           <div style={resourceContainer}>
              <div style={resource}>
                <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
                <div style={resourceTitle}>
-               Vist my Medical Advocacy Partners website!
+               Visit my Medical Advocacy Partners website!
                </div>
                <div style={resourceBody}>
                Go To Website <span style={arrowStyle}> &#10173; </span>
+               </div>
+             </div>
+
+             <div style={resource}>
+               <img style={resourceImage} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
+               <div style={resourceTitle}>
+               Check out the Collectors Corner at Wolf and Finch
+               </div>
+               <div style={resourceBody}>
+               Go To Website <span style={arrowStyle}> &#10173; </span>
+
                </div>
              </div>
            </div>
@@ -156,3 +175,4 @@
     );
   }
 }
+  //https://wolfandfinch.com/blogs/news/collector

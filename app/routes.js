@@ -15,51 +15,52 @@ export default function createRoutes() {
 
   return [
     {
-        path: '/',
-        name: 'Home',
-        getComponent(nextState, cb) {
-          import('containers/Home')
-            .then(loadModule(cb))
-            .catch(errorLoading);
-        },
+    path: '/',
+    name: 'Home',
+    getComponent(nextState, cb) {
+      import('containers/Home')
+        .then(loadModule(cb))
+        .catch(errorLoading);
       },
+    },
 
-      {
-          path: '/articles',
-          name: 'Articles',
-          getComponent(nextState, cb) {
-            import('containers/Articles')
-              .then(loadModule(cb))
-              .catch(errorLoading);
-          },
-        },
+    {
+    path: '/articles',
+    name: 'Articles',
+    getComponent(nextState, cb) {
+      import('containers/Articles')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    },
 
-      {
-          path: '/links',
-          name: 'Links',
-          getComponent(nextState, cb) {
-            import('containers/Links')
-              .then(loadModule(cb))
-              .catch(errorLoading);
-          },
-        },
+    {
+    path: '/links',
+    name: 'Links',
+    getComponent(nextState, cb) {
+      import('containers/Links')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    },
 
-      {
-          path: '/dashboard',
-          name: 'Dashboard',
-          getComponent (nextState, cb) {
-              import('containers/Dashboard')
-                .then(loadModule(cb))
-                .catch(errorLoading);
-          },
-        },
-     {
-      path: '*',
-      name: 'notfound',
-      getComponent(nextState, cb) {
-        import('containers/NotFoundPage')
+    {
+    path: '/dashboard',
+    name: 'Dashboard',
+    getComponent (nextState, cb) {
+        import('containers/Dashboard')
           .then(loadModule(cb))
           .catch(errorLoading);
+      },
+    },
+
+   {
+    path: '*',
+    name: 'notfound',
+    getComponent(nextState, cb) {
+      import('containers/NotFoundPage')
+        .then(loadModule(cb))
+        .catch(errorLoading);
       },
     },
   ];

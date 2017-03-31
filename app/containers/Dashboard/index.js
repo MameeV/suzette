@@ -43,6 +43,33 @@ export default class Dashboard extends React.PureComponent {
     }
     reader.readAsDataURL(file);
   }
+
+    storearticle = () => {
+        var data = new FormData();
+        data.append("title", this.state.title);
+        data.append("body", this.state.body);
+        data.append("image", this.state.image);
+
+        fetch ("", {
+          //will input API in point later when we work on backend!
+          //example: http://localhost:8000/api/storearticle
+            //generally keep the names the same so you know where the function is going!
+          method: "post",
+          body: data
+        })
+        .then (function(response) {
+          return response.json();
+        })
+        .then (function(json) {
+          if (json.success) {
+            alert ("Success!");
+          }
+          else if (json.error) {
+            alert (":(Error, Try Again!)");
+          }
+        })
+    }
+
   render() {
     const titleStyle={
       width: "100%",
@@ -92,13 +119,14 @@ export default class Dashboard extends React.PureComponent {
     }
     const inputTitle={
       width: "100%",
-      height: "auto",
+      display: "flex",
+      flexWrap: "auto",
       background: "#999999",
       paddingLeft: "5px"
     }
     const inputBody={
       width: "100%",
-      displaly: "flex",
+      display: "flex",
       flexWrap: "auto",
       background: "#888888",
       paddingLeft: "5px"
@@ -127,7 +155,7 @@ export default class Dashboard extends React.PureComponent {
             <img src={this.state.preview}/>
             <input style={inputTitle} onChange={this.handleTitle} value={this.state.title} type="text" placeholder="Title"/>
             <textarea style={inputBody} onChange={this.handleBody} value={this.state.body} placeholder="Body Copy"> </textarea>
-            <input style={inputSubmit} type="submit"/>
+            <input style={inputSubmit} onTouchTap={this.storeArticle} type="submit"/>
           </div>
         </div>
         </main>
