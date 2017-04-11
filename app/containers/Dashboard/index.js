@@ -44,16 +44,13 @@ export default class Dashboard extends React.PureComponent {
     reader.readAsDataURL(file);
   }
 
-    storearticle = () => {
+    storeArticle = () => {
         var data = new FormData();
         data.append("title", this.state.title);
         data.append("body", this.state.body);
         data.append("image", this.state.image);
 
-        fetch ("", {
-          //will input API in point later when we work on backend!
-          //example: http://localhost:8000/api/storearticle
-            //generally keep the names the same so you know where the function is going!
+        fetch ("http://localhost:8000/api/storeArticle", {
           method: "post",
           body: data
         })
@@ -62,10 +59,10 @@ export default class Dashboard extends React.PureComponent {
         })
         .then (function(json) {
           if (json.success) {
-            alert ("Success!");
+            alert("Success!");
           }
           else if (json.error) {
-            alert (":(Error, Try Again!)");
+            alert("Error, Try Again!");
           }
         })
     }
