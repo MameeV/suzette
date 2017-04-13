@@ -150,7 +150,7 @@ export default class Dashboard extends React.PureComponent {
           <div style={input}>
             <input style={inputFile} onChange={this.handleImage} type="file"/>
             <img src={this.state.preview}/>
-            <input style={inputTitle} onChange={this.handleTitle} value={this.state.title} type="text" placeholder="Title"/>
+            <textarea style={inputTitle} onChange={this.handleTitle} value={this.state.title} type="text" placeholder="Title"/>
             <textarea style={inputBody} onChange={this.handleBody} value={this.state.body} placeholder="Body Copy"> </textarea>
             <input style={inputSubmit} onTouchTap={this.storeArticle} type="submit"/>
           </div>
