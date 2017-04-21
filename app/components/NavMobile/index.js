@@ -49,7 +49,7 @@ class NavMobile extends React.PureComponent {
           <Link style={activeStyleMobile} to="/"> Home </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={linkStyleMobile} to="/articles"> Articles </Link>
+          <Link style={linkStyleMobile} to="/articles"> Blog </Link>
         </MenuItem>
         <MenuItem>
           <Link style={linkStyleMobile} to="/links"> Links </Link>
@@ -64,7 +64,7 @@ class NavMobile extends React.PureComponent {
           <Link style={linkStyleMobile} to="/"> Home </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={activeStyleMobile} to="/articles"> Articles </Link>
+          <Link style={activeStyleMobile} to="/articles"> Blog </Link>
         </MenuItem>
         <MenuItem>
           <Link style={linkStyleMobile} to="/links"> Links </Link>
@@ -79,7 +79,7 @@ class NavMobile extends React.PureComponent {
           <Link style={linkStyleMobile} to="/"> Home </Link>
         </MenuItem>
         <MenuItem>
-          <Link style={linkStyleMobile} to="/articles"> Articles </Link>
+          <Link style={linkStyleMobile} to="/articles"> Blog </Link>
         </MenuItem>
         <MenuItem>
           <Link style={activeStyleMobile} to="/links"> Links </Link>

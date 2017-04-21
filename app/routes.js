@@ -48,9 +48,29 @@ export default function createRoutes() {
     path: '/dashboard',
     name: 'Dashboard',
     getComponent (nextState, cb) {
-        import('containers/Dashboard')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+      import('containers/Dashboard')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    },
+
+    {
+    path: '/access',
+    name: 'Access',
+    getComponent (nextState, cb) {
+      import('containers/Access')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    },
+
+    {
+    path: '/enroll',
+    name: 'Enroll',
+    getComponent (nextState, cb) {
+      import('containers/Enroll')
+        .then(loadModule(cb))
+        .catch(errorLoading);
       },
     },
 

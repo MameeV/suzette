@@ -46,7 +46,7 @@ class NavBar extends React.PureComponent {
       return(
         <div>
         <Link style={activeStyle} to="/"> Home </Link>
-        <Link style={linkStyle} to="/articles"> Articles </Link>
+        <Link style={linkStyle} to="/articles"> Blog </Link>
         <Link style={linkStyle} to="/links"> Links </Link>
         </div>
       )
@@ -55,7 +55,7 @@ class NavBar extends React.PureComponent {
       return(
         <div>
         <Link style={linkStyle} to="/"> Home </Link>
-        <Link style={activeStyle} to="/articles"> Articles </Link>
+        <Link style={activeStyle} to="/articles"> Blog </Link>
         <Link style={linkStyle} to="/links"> Links </Link>
         </div>
       )
@@ -64,7 +64,7 @@ class NavBar extends React.PureComponent {
       return(
         <div>
         <Link style={linkStyle} to="/"> Home </Link>
-        <Link style={linkStyle} to="/articles"> Articles </Link>
+        <Link style={linkStyle} to="/articles"> Blog </Link>
         <Link style={activeStyle} to="/links"> Links </Link>
         </div>
       )
@@ -73,7 +73,7 @@ class NavBar extends React.PureComponent {
   render() {
     const sideStyle={
       width: "11%",
-      height: "100vh",
+      minheight: "100vh",
       background: "#B4938C"
     }
     const indentStyle={
