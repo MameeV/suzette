@@ -69,6 +69,17 @@ class NavBar extends React.PureComponent {
         </div>
       )
     }
+
+    else if(this.state.active==0){
+      return(
+        <div>
+        <Link style={linkStyle} to="/"> Home </Link>
+        <Link style={linkStyle} to="/articles"> Blog </Link>
+        <Link style={linkStyle} to="/links"> Links </Link>
+        </div>
+      )
+    }
+
   }
   render() {
     const sideStyle={

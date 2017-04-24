@@ -13,26 +13,7 @@
 
  export default class Articles extends React.PureComponent {
    render() {
-   const footerStyle={
-     background: "#74D1EA",
-     position: "fixed",
-     bottom: "10px",
-     right: "10px",
-     padding: "15px",
-     borderRadius: "50px"
-   }
-   const body2Style={
-     width: "100%",
-     height: "100vh",
-     background: "#FAE0EE",
-     fontFamily: "Raleway",
-     fontWeight: "Bold",
-     fontSize: "20px",
-     color: "#3E262A",
-     paddingTop: "30px",
-     paddingLeft: "25px"
-   }
-   const headTextStyle={
+     const headTextStyle={
      width: "100%",
      height: "80px",
      top: "auto",
@@ -51,9 +32,6 @@
      textAlign: "center",
      paddingTop: "10px"
    }
-   const indentStyle={
-     margin: "15px"
-   }
    const resourceContainer={
      display: "flex",
      flexDirection: "row",
@@ -64,25 +42,21 @@
      background: "#FAE0EE",
      margin: "0 auto",
    }
-   const resourceContainerMobile={
-     display: "flex",
-     flexDirection: "column",
-     width: "100%",
-     background: "#FAE0EE"
-   }
    const resource={
      width: "25%",
      display: "flex",
-     flexDirection: "column"
-   }
-   const resourceMobile={
-     width: "100%",
-     display: "flex",
-     flexDirection: "column"
+     flexDirection: "column",
    }
    const resourceImage={
      width: "100%",
-     height: "auto"
+     height: "auto",
+     paddingTop: "10px"
+   }
+   const resourceImage2={
+     display: "flex",
+     flexDirection: "column",
+     justifyContent: "center",
+     padding: "5px"
    }
    const resourceTitle={
      width: "100%",
@@ -120,58 +94,52 @@
      color: "#74D1EA",
      paddingTop: "30px"
    }
-   const imageStyle={
-     width: "100%",
-     height: "auto"
-   }
+
    return (
      <div>
        <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
        <div style={headTextStyle}>
          Resource Links
        </div>
-
-
        <main>
          <NavMobile active={3}/>
            <div style={resourceContainer}>
              <div style={resource}>
-               <div style={resourceImage}>
-               Image for Resource
-               </div>
+                <img style={resourceImage}
+                src="https://media.licdn.com/media/AAEAAQAAAAAAAAc1AAAAJGQ5ZWNmZDE4LWZmYzItNDllNy1iODcyLTU5MjZhNDAwNGMwOQ.png"/>
                <div style={resourceTitle}>
-               Learn more about Xxxxxxxx Xxxxxxxx at this website
+               Here's the Link to My Husband's Blog
                </div>
                <div style={resourceBody}>
                Go To Website <span style={arrowStyle}> &#10173; </span>
                </div>
              </div>
-
              <div style={resource}>
                <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
                <div style={resourceTitle}>
-               Visit my Medical Advocacy Partners website!
+               Visit My Medical Advocacy Partners Website!
                </div>
                <div style={resourceBody}>
                Go To Website <span style={arrowStyle}> &#10173; </span>
                </div>
              </div>
-
              <div style={resource}>
-               <img style={resourceImage} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
+               <div style={resourceImage}>
+               <img style={resourceImage2} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
+               </div>
                <div style={resourceTitle}>
-               Check out the Collectors Corner at Wolf and Finch
+               Check Out the Collectors Corner at Wolf and Finch
                </div>
                <div style={resourceBody}>
                Go To Website <span style={arrowStyle}> &#10173; </span>
-
                </div>
              </div>
            </div>
-
          <MessageButton/>
        </main>
      </div>
     );
   }
 }
+//https://markverbeck.wordpress.com/
+//https://wolfandfinch.com/blogs/news/collector

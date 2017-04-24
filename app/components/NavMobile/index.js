@@ -87,6 +87,21 @@ class NavMobile extends React.PureComponent {
         </div>
       )
     }
+    else if(this.props.active==0){
+      return(
+        <div>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/"> Home </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/articles"> Blog </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={linkStyleMobile} to="/links"> Links </Link>
+        </MenuItem>
+        </div>
+      )
+    }
   }
   render() {
     const topBurger={

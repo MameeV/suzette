@@ -74,6 +74,16 @@ export default function createRoutes() {
       },
     },
 
+    {
+    path: '/single',
+    name: 'Single',
+    getComponent (nextState, cb) {
+      import('containers/Single')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    },
+    
    {
     path: '*',
     name: 'notfound',
