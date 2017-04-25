@@ -46,6 +46,7 @@
      width: "25%",
      display: "flex",
      flexDirection: "column",
+     alignSelf: "end"
    }
    const resourceImage={
      width: "100%",
@@ -53,10 +54,10 @@
      paddingTop: "10px"
    }
    const resourceImage2={
-     display: "flex",
-     flexDirection: "column",
-     justifyContent: "center",
-     padding: "5px"
+     width: "75px",
+     height: "auto",
+     alignSelf: "center",
+     paddingTop: "10px"
    }
    const resourceTitle={
      width: "100%",
@@ -124,9 +125,7 @@
                </div>
              </div>
              <div style={resource}>
-               <div style={resourceImage}>
                <img style={resourceImage2} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
-               </div>
                <div style={resourceTitle}>
                Check Out the Collectors Corner at Wolf and Finch
                </div>
