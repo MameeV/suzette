@@ -95,6 +95,9 @@
      color: "#74D1EA",
      paddingTop: "30px"
    }
+   const linkStyle={
+     textDecoration: "none"
+   }
 
    return (
      <div>
@@ -112,7 +115,9 @@
                Here's the Link to My Husband's Blog
                </div>
                <div style={resourceBody}>
-               Go To Website <span style={arrowStyle}> &#10173; </span>
+               <a href="https://markverbeck.wordpress.com" target="_blank" style={linkStyle}>
+                  Go To Website <span style={arrowStyle}> &#10173; </span>
+                </a>
                </div>
              </div>
              <div style={resource}>
@@ -121,7 +126,9 @@
                Visit My Medical Advocacy Partners Website!
                </div>
                <div style={resourceBody}>
-               Go To Website <span style={arrowStyle}> &#10173; </span>
+               <a href="http://medicaladvocacypartners.com" target="_blank" style={linkStyle}>
+                  Go To Website <span style={arrowStyle}> &#10173; </span>
+                </a>
                </div>
              </div>
              <div style={resource}>
@@ -130,7 +137,9 @@
                Check Out the Collectors Corner at Wolf and Finch
                </div>
                <div style={resourceBody}>
-               Go To Website <span style={arrowStyle}> &#10173; </span>
+               <a href="https://wolfandfinch.com/blogs/news/collector" target="_blank" rel="nofollow" style={linkStyle}>
+                  Go To Website <span style={arrowStyle}> &#10173; </span>
+                </a>
                </div>
              </div>
            </div>
@@ -140,5 +149,3 @@
     );
   }
 }
-//https://markverbeck.wordpress.com/
-//https://wolfandfinch.com/blogs/news/collector

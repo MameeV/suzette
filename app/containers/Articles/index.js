@@ -16,34 +16,23 @@ export default class Articles extends React.PureComponent {
   super(props);
   this.state={
     articles:[
-      {
-        image:"http://h4z.it/Image/637ef3_IMG_0357.JPG",
-        title:"Creativity & Wellness",
-        body:"Art initiatives can help to transform our community while tackling social and community issues. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Cur post Tarentum ad Archytam? Illud urgueam, non intellegere eum quid sibi dicendum sit, cum dolorem summum malum esse dixerit. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Pugnant Stoici cum Peripateticis. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quod quidem iam fit etiam in Academia. Sit sane ista voluptas. Negat enim summo bono afferre incrementum diem. Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore."
-      },
-      {
-        image:"http://h4z.it/Image/933cf8_IMG_0635.JPG",
-        title:"A Different Perspective",
-        body:"Drones are allowing the creative side of us to see things a little differently. DSLJSdfafs adsfldskfj aald a;ldfkjs a;lsdfkjas;l a;dslfkja;s a;sdlfkja; a;dslfkj. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Cur post Tarentum ad Archytam? Illud urgueam, non intellegere eum quid sibi dicendum sit, cum dolorem summum malum esse dixerit. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Pugnant Stoici cum Peripateticis. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quod quidem iam fit etiam in Academia. Sit sane ista voluptas. Negat enim summo bono afferre incrementum diem. Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore."
-      },
-      {
-        image:"http://h4z.it/Image/637ef3_IMG_0357.JPG",
-        title:"Article Title",
-        body:"Article Copy. DSLJSdfafs adsfldskfj aald a;ldfkjs a;lsdfkjas;l a;dslfkja;s a;sdlfkja; a;dslfkj. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Cur post Tarentum ad Archytam? Illud urgueam, non intellegere eum quid sibi dicendum sit, cum dolorem summum malum esse dixerit. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Pugnant Stoici cum Peripateticis. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quod quidem iam fit etiam in Academia. Sit sane ista voluptas. Negat enim summo bono afferre incrementum diem. Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore."
-      },
-      {
-        image:"http://h4z.it/Image/933cf8_IMG_0635.JPG",
-        title:"Article Title",
-        body:"Article Copy. DSLJSdfafs adsfldskfj aald a;ldfkjs a;lsdfkjas;l a;dslfkja;s a;sdlfkja; a;dslfkj. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Cur post Tarentum ad Archytam? Illud urgueam, non intellegere eum quid sibi dicendum sit, cum dolorem summum malum esse dixerit. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Pugnant Stoici cum Peripateticis. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quod quidem iam fit etiam in Academia. Sit sane ista voluptas. Negat enim summo bono afferre incrementum diem. Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore."
-      },
-      {
-        image:"http://h4z.it/Image/637ef3_IMG_0357.JPG",
-        title:"Article Title",
-        body:"Article Copy. DSLJSdfafs adsfldskfj aald a;ldfkjs a;lsdfkjas;l a;dslfkja;s a;sdlfkja; a;dslfkj. Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Cur post Tarentum ad Archytam? Illud urgueam, non intellegere eum quid sibi dicendum sit, cum dolorem summum malum esse dixerit. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Pugnant Stoici cum Peripateticis. Animi enim quoque dolores percipiet omnibus partibus maiores quam corporis. Quod quidem iam fit etiam in Academia. Sit sane ista voluptas. Negat enim summo bono afferre incrementum diem. Luxuriam non reprehendit, modo sit vacua infinita cupiditate et timore."
-      },
+
     ]
   }
 }
+  componentWillMount(){
+    fetch('http://localhost:8000/api/getArticles')
+
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      this.setState({
+        articles:json
+      })
+    }.bind(this))
+  }
+
   render() {
   const footerStyle={
     background: "#74D1EA",

@@ -112,7 +112,7 @@ export default class Home extends React.PureComponent {
                   Please check out my Blog page to see the articles I have written.
               <br/>
               <br/>
-                  On my Links page, I compiled some interesting websites with links to the sites.
+                  On my Links page, I compiled some interesting websites and links to the sites.
               <br/>
                 <img style={mainphotoStyle} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>
@@ -140,7 +140,7 @@ export default class Home extends React.PureComponent {
                 Please check out my Blog page to see the articles I have written.
               <br/>
               <br/>
-                On my Links page, I compiled some interesting websites with links to the sites.
+                On my Links page, I compiled some interesting websites and links to the sites.
               <br/>
                 <img style={mainphotoStyleMobile} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>

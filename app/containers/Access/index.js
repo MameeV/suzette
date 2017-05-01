@@ -33,7 +33,7 @@ export default class Access extends React.PureComponent {
     data.append ("username", this.state.username);
     data.append ("password", this.state.password);
 
-    fetch ("" , {
+    fetch ("http://localhost:8000/api/signin" , {
       method: "post",
       body: data
     })
