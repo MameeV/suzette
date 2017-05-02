@@ -31,10 +31,12 @@ export default class Home extends React.PureComponent {
       background: "#FAE0EE",
       display: "flex",
       flexDirection: "row",
-      fontFamily:"Raleway",
-      fontWeight:"Bold",
+      fontFamily: "Fredericka the Great",
+      fontStyle: "cursive",
+      fontWeight: "bold",
+      textTransform: "uppercase",
       color: "#3E262A",
-      fontSize: "48px"
+      fontSize: "50px"
     }
     const titleSize={
       width: "100vw",
@@ -44,7 +46,7 @@ export default class Home extends React.PureComponent {
       width: "89%",
       minHeight: "100vh",
       background: "#FAE0EE",
-      fontFamily: "Josefin Slab",
+      fontFamily: "Raleway",
       fontWeight: "Bold",
       fontSize: "20px",
       color: "#3E262A"
@@ -53,7 +55,7 @@ export default class Home extends React.PureComponent {
       width: "100%",
       minheight: "100vh",
       background: "#FAE0EE",
-      fontFamily: "Josefin Slab",
+      fontFamily: "Raleway",
       fontWeight: "Bold",
       fontSize: "20px",
       color: "#3E262A"
@@ -91,12 +93,12 @@ export default class Home extends React.PureComponent {
 
       <div>
 
-        <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
+        <Helmet title="Home" meta={[ { name: 'MrsVerbeck.com', content: 'Who Is Mrs. Verbeck?' }]}/>
         <header>
           <span style={titleStyle}>
             <img style={animeStyle} src="http://h4z.it/Image/7a075b_IMG_0630.JPG"/>
           <div style={headingStyle}>
-            Hello World!
+            Hello & Welcome!
           </div>
           </span>
         </header>
@@ -106,13 +108,13 @@ export default class Home extends React.PureComponent {
             <NavBar activeItem="1"/>
             <div style={bodyStyle}>
               <div style={indentStyle}>
-                My name is Suzette. I am a wife (of 28 years), mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our Augusta, GA community. Professionally I am working to help improve healthcare.
+                My name is Suzette. I am a wife, mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our community. Professionally I strive to help improve healthcare.
               <br/>
               <br/>
                   Please check out my Blog page to see the articles I have written.
               <br/>
               <br/>
-                  On my Links page, I compiled some interesting websites and links to the sites.
+                  On my Links page, I compiled some interesting websites with links.
               <br/>
                 <img style={mainphotoStyle} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>
@@ -134,13 +136,13 @@ export default class Home extends React.PureComponent {
           <main style={mainStyle}>
             <div style={bodyStyleMobile}>
               <div style={indentStyle}>
-                My name is Suzette. I am a wife (of 28 years), mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our Augusta, GA community. Professionally I am working to help improve healthcare.
+                My name is Suzette. I am a wife, mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our community. Professionally I strive to help improve healthcare.
               <br/>
               <br/>
                 Please check out my Blog page to see the articles I have written.
               <br/>
               <br/>
-                On my Links page, I compiled some interesting websites and links to the sites.
+                On my Links page, I compiled some interesting websites with links.
               <br/>
                 <img style={mainphotoStyleMobile} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>

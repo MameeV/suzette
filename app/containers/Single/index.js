@@ -18,15 +18,23 @@
 
   render() {
     const titleStyle={
+      width: "100%",
+      height: "80px",
+      top: "auto",
       borderTop:"3px solid #74D1EA",
       borderBottom:"3px solid #74D1EA",
       background: "#FAE0EE",
       display: "flex",
+      flexDirection: "row",
       justifyContent: "center",
-      fontFamily:"Raleway",
-      fontWeight:"Bold",
+      fontFamily: "Fredericka the Great",
+      fontStyle: "cursive",
+      fontWeight: "bold",
+      fontSize: "40px",
       color: "#3E262A",
-      fontSize: "48px"
+      textTransform: "uppercase",
+      textAlign: "center",
+      paddingTop: "10px"
     }
     const bodyStyle={
       background: "#FAE0EE",
@@ -35,7 +43,7 @@
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      fontFamily: "Josefin Slab",
+      fontFamily: "Raleway",
       fontWeight: "Bold",
       fontSize: "20px",
       color: "#3E262A",
@@ -53,15 +61,15 @@
         <Helmet title="Single" meta={[ { name: 'description', content: 'View page for selected article' }]}/>
         <header>
           <span style={titleStyle}>
-            Article Title
+
           </span>
         </header>
         <NavMobile active={0}/>
         <main style={bodyStyle}>
-          <img style={photoStyle} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
+          <img style={photoStyle} src=""/>
           <br/>
           <br/>
-          Article Body.
+
         </main>
       </div>
      );

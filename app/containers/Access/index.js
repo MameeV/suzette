@@ -12,13 +12,13 @@ export default class Access extends React.PureComponent {
   constructor(props){
     super(props);
     this.state={
-      username: "",
+      email: "",
       password: ""
     }
   }
   handleUsername = (event) => {
     this.setState({
-      username: event.target.value
+      email: event.target.value
     })
   }
 
@@ -30,7 +30,7 @@ export default class Access extends React.PureComponent {
 
   signin = () => {
     var data = new FormData();
-    data.append ("username", this.state.username);
+    data.append ("email", this.state.email);
     data.append ("password", this.state.password);
 
     fetch ("http://localhost:8000/api/signin" , {
@@ -103,7 +103,7 @@ export default class Access extends React.PureComponent {
       display: "flex",
       flexDirection: "column"
     }
-    const inputUsername={
+    const inputEmail={
       width: "100%",
       display: "flex",
       flexWrap: "auto",
@@ -145,7 +145,7 @@ export default class Access extends React.PureComponent {
         <div style={titleStyle}> SignIn for Access </div>
         <div style={inputContainer}>
           <div style={input}>
-            <textarea style={inputUsername} onChange={this.handleUsername} value={this.state.username} type="text" placeholder="Enter Your Username (This may be your Email address)"/>
+            <textarea style={inputEmail} onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Enter Your Email Address"/>
             <textarea style={inputPassword} onChange={this.handlePassword} value={this.state.password} type="text" placeholder="Enter Your Password"/>
             <input style={inputSubmit} onTouchTap={this.signin} type="submit"/>
           </div>

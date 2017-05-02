@@ -156,8 +156,8 @@ export default class Enroll extends React.PureComponent {
         <div style={inputContainer}>
           <div style={input}>
             <textarea style={inputEmail} onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Enter Your Email Address to Enroll for Database Site Access"/>
-            <textarea style={inputUsername} onChange={this.handleUsername} value={this.state.username} type="text" placeholder="Enter Your UserName. This can be your Email Address!"/>
-            <textarea style={inputPassword} onChange={this.handlePassword} value={this.state.password} type="text" placeholder="Enter Your Password"/>
+            <textarea style={inputUsername} onChange={this.handleUsername} value={this.state.username} type="text" placeholder="Enter Your First and Last Name"/>
+            <textarea style={inputPassword} onChange={this.handlePassword} value={this.state.password} type="text" placeholder="Enter A Password"/>
             <input style={inputSubmit} onTouchTap={this.signup} type="submit"/>
           </div>
         </div>
