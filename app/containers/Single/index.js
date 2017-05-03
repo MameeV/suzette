@@ -25,7 +25,7 @@
    }
 
    componentWillMount(){
-     fetch('http://localhost:8000/api/showArticle/'+this.props.params.id)
+     fetch('http://mrsverbeck.com/api/showArticle/'+this.props.params.id)
 
      .then(function(response) {
        return response.json();

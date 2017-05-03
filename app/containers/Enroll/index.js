@@ -41,7 +41,7 @@ export default class Enroll extends React.PureComponent {
     data.append("password", this.state.password);
     data.append("email", this.state.email);
 
-    fetch ("http://localhost:8000/api/signup", {
+    fetch ("http://mrsverbeck.com/api/signup", {
       method: "post",
       body: data
     })
