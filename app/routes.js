@@ -75,7 +75,7 @@ export default function createRoutes() {
     },
 
     {
-    path: '/single',
+    path: '/single/:id',
     name: 'Single',
     getComponent (nextState, cb) {
       import('containers/Single')
@@ -83,7 +83,7 @@ export default function createRoutes() {
         .catch(errorLoading);
       },
     },
-    
+
    {
     path: '*',
     name: 'notfound',

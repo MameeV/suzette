@@ -13,10 +13,11 @@ export default class Access extends React.PureComponent {
     super(props);
     this.state={
       email: "",
-      password: ""
+      password: "",
+      token: "",
     }
   }
-  handleUsername = (event) => {
+  handleEmail = (event) => {
     this.setState({
       email: event.target.value
     })
@@ -37,10 +38,10 @@ export default class Access extends React.PureComponent {
       method: "post",
       body: data
     })
-    .then (function(response) {
+    .then ((response) => {
       return response.json();
     })
-    .then (function(json) {
+    .then ((json) => {
       if (json.error) {
         alert (json.error);
       }
@@ -50,10 +51,13 @@ export default class Access extends React.PureComponent {
       }
       else if (json.token !== false)
       {
-        sessionStorage.setItem("token", json.token);
+        sessionStorage.setItem("token", JSON.stringify(json.token));
         alert ("Welcome Back!");
+
+        this.setState({token: sessionStorage.getItem('token')});
+        console.log(this.state.token);
       }
-    })
+    });
   }
 
   render() {

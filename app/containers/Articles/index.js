@@ -160,7 +160,7 @@ export default class Articles extends React.PureComponent {
           <NavMobile active={2}/>
           <div style={articleContainer}>
             {this.state.articles.map((a, i) => (
-              <div style={article} key={i}>
+              <Link to={`/single/${a.id}`} style={article} key={i}>
                 <div style={articleImage}>
                   <img style={imgStyle} src={a.image}/>
                 </div>
@@ -170,7 +170,7 @@ export default class Articles extends React.PureComponent {
                 <div style={articleBody}>
                 {a.body}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </main>

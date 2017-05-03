@@ -20,19 +20,19 @@ export default class Enroll extends React.PureComponent {
   handleUsername = (event) => {
     this.setState({
       username: event.target.value
-    })
+    });
   }
 
   handlePassword = (event) => {
     this.setState({
       password: event.target.value
-    })
+    });
   }
 
   handleEmail = (event) => {
     this.setState({
       email: event.target.value
-    })
+    });
   }
 
   signup = () => {
@@ -55,7 +55,7 @@ export default class Enroll extends React.PureComponent {
       else if (json.success) {
         alert (json.success);
       }
-    })
+    });
   }
 
 
