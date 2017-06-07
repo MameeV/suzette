@@ -14,7 +14,9 @@ class MessageButton extends React.PureComponent {
   constructor(props){
     super(props);
     this.state={
-      contactOpen: false
+      contactOpen: false,
+      message: "",
+      email: ""
     }
   }
   handleOpen = () => {
@@ -25,6 +27,39 @@ class MessageButton extends React.PureComponent {
   handleClose = () => {
     this.setState({
       contactOpen: false
+    })
+  }
+
+  handleMessage = (event) => {
+    this.setState({
+      message:event.target.value
+    })
+  }
+  handleEmail = (event) => {
+    this.setState({
+      email:event.target.value
+    })
+  }
+
+  contact = () => {
+    var data = new FormData();
+    data.append("message",this.state.message);
+    data.append("email",this.state.email);
+
+    fetch("http://mrsverbeck.com/api/contact",{
+      method:"post",
+      body:data
+    })
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(json){
+      if(json.error){
+        alert(json.error);
+      }
+      else if(json.success){
+        alert(json.success);
+      }
     })
   }
   render() {
@@ -51,7 +86,7 @@ class MessageButton extends React.PureComponent {
 
     const actions = [
       <FlatButton label="Cancel" onTouchTap={this.handleClose}/>,
-      <FlatButton label="Submit"/>
+      <FlatButton label="Submit" onTouchTap={()=>this.contact()}/>
     ]
     return (
       <div>
@@ -60,9 +95,9 @@ class MessageButton extends React.PureComponent {
         </footer>
         <Dialog titleStyle={messageBoxStyle} title="Send me a message. I look forward to hearing from you." actions={actions} open={this.state.contactOpen}>
         <br/>
-        <TextField hintText="Enter your eMail address here."/>
+        <TextField onChange={this.handleEmail} hintText="Enter your eMail address here."/>
         <br/>
-        <TextField hintText="Enter your message here!"/>
+        <TextField onChange={this.handleMessage} hintText="Enter your message here!"/>
         </Dialog>
       </div>
     );

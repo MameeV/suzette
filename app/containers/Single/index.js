@@ -103,7 +103,7 @@
 
     return (
       <div>
-        <Helmet title="Single" meta={[ { name: 'description', content: 'View page for selected article' }]}/>
+        <Helmet title="Single" meta={[ { name: 'description', content: 'View Selected Article' }]}/>
         <header>
           <span style={titleStyle}>
             {this.state.article.title}
@@ -120,15 +120,15 @@
         <footer style={footerContainer}>
           &copy; Suzette Verbeck
           <div style={iconContainer}>
-            <div style={icon}>
+            <a href="http://www.facebook.com/thoseverbecks" target="_blank" style={icon}>
               <FacebookIcon/>
-            </div>
-            <div style={icon}>
+            </a>
+            <a href="http://www.twitter.com/mrsverbeck" target="_blank" style={icon}>
               <TwitterIcon/>
-            </div>
-            <div style={icon}>
+            </a>
+            <a href="http://www.linkedin.com/in/suzette-verbeck-a609bb44" target="_blank" style={icon}>
               <LinkedinIcon/>
-            </div>
+            </a>
           </div>
         </footer>
       </div>

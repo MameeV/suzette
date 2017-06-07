@@ -93,7 +93,7 @@ export default class Home extends React.PureComponent {
 
       <div>
 
-        <Helmet title="Home" meta={[ { name: 'MrsVerbeck.com', content: 'Who Is Mrs. Verbeck?' }]}/>
+        <Helmet title="Home" meta={[{ name: 'MrsVerbeck.com', content: 'Who Is Mrs. Verbeck?' }]}/>
         <header>
           <span style={titleStyle}>
             <img style={animeStyle} src="http://h4z.it/Image/7a075b_IMG_0630.JPG"/>

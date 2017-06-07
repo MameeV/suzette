@@ -15,21 +15,21 @@ export default class Dashboard extends React.PureComponent {
       title: "",
       body: "",
       image: "",
-      preview: ""
+      preview: "",
+      token: sessionStorage.getItem("token")
     }
   }
   handleTitle = (event) => {
     this.setState({
       title: event.target.value
     })
-    console.log(this.state.title)
   }
-  //console log shows whats happening with data. REMOVE logs when finished with project!!!
+
   handleBody = (event) => {
     this.setState({
       body: event.target.value
     })
-    console.log(this.state.body)
+
   }
   handleImage = (event) => {
     event.preventDefault();
@@ -52,7 +52,10 @@ export default class Dashboard extends React.PureComponent {
 
         fetch ("http://mrsverbeck.com/api/storeArticle", {
           method: "post",
-          body: data
+          body: data,
+          headers: {
+            "Authorization":"Bearer "+this.state.token
+          }
         })
         .then (function(response) {
           return response.json();
@@ -140,7 +143,7 @@ export default class Dashboard extends React.PureComponent {
     }
     return (
       <div>
-        <Helmet title="Dashboard" meta={[ { name: 'description', content: 'Description of Dashboard' }]}/>
+        <Helmet title="Dashboard" meta={[ { name: 'description', content: 'Articles Dashboard' }]}/>
         <div style={headTextStyle}>
           Articles Dashboard
         </div>

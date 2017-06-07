@@ -101,7 +101,7 @@
 
    return (
      <div>
-       <Helmet title="Links" meta={[ { name: 'description', content: 'Description of Links' }]}/>
+       <Helmet title="Links" meta={[ { name: 'description', content: 'Website Resources and Links' }]}/>
        <div style={headTextStyle}>
          Resource Links
        </div>
