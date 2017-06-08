@@ -19,6 +19,7 @@ class MessageButton extends React.PureComponent {
       email: ""
     }
   }
+
   handleOpen = () => {
     this.setState({
       contactOpen: true
@@ -62,6 +63,7 @@ class MessageButton extends React.PureComponent {
       }
     })
   }
+
   render() {
     const buttonStyle={
       fontFamily: "Raleway",
@@ -77,7 +79,6 @@ class MessageButton extends React.PureComponent {
       right: "10px",
       padding: "15px",
       borderRadius: "50px",
-
     }
     const messageBoxStyle={
       fontFamily: "Raleway",
@@ -88,6 +89,7 @@ class MessageButton extends React.PureComponent {
       <FlatButton label="Cancel" onTouchTap={this.handleClose}/>,
       <FlatButton label="Submit" onTouchTap={()=>this.contact()}/>
     ]
+    
     return (
       <div>
         <footer style={footerStyle}>

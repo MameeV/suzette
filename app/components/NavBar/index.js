@@ -7,7 +7,6 @@
 import React from 'react';
 import {Link} from "react-router";
 
-
 class NavBar extends React.PureComponent {
   constructor(props){
     super(props);
@@ -15,6 +14,7 @@ class NavBar extends React.PureComponent {
       active:0
     }
   }
+
   componentWillMount(){
     this.setState({
       active:this.props.activeItem
@@ -40,7 +40,6 @@ class NavBar extends React.PureComponent {
       display: "block",
       paddingTop: "100px",
       paddingLeft: "15px",
-
     }
     if(this.state.active==1){
       return(
@@ -69,7 +68,6 @@ class NavBar extends React.PureComponent {
         </div>
       )
     }
-
     else if(this.state.active==0){
       return(
         <div>
@@ -79,8 +77,8 @@ class NavBar extends React.PureComponent {
         </div>
       )
     }
-
   }
+
   render() {
     const sideStyle={
       width: "11%",
@@ -90,7 +88,6 @@ class NavBar extends React.PureComponent {
     const indentStyle={
       margin: "15px"
     }
-
 
     return (
       <div style={sideStyle}>

@@ -11,7 +11,6 @@ class Head2 extends React.PureComponent {
     super(props);
     this.state={
       pageTitle:""
-
     }
   }
 
@@ -19,8 +18,8 @@ class Head2 extends React.PureComponent {
     this.setState({
       pageTitle: this.props.title
     })
-
   }
+  
   render() {
     const heading2Style={
       width: "100%",

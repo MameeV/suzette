@@ -17,6 +17,7 @@ export default class Enroll extends React.PureComponent {
       email: ""
     }
   }
+
   handleUsername = (event) => {
     this.setState({
       username: event.target.value
@@ -58,7 +59,6 @@ export default class Enroll extends React.PureComponent {
     });
   }
 
-
   render() {
     const titleStyle={
       width: "100%",
@@ -92,13 +92,13 @@ export default class Enroll extends React.PureComponent {
       paddingTop: "10px"
     }
     const inputContainer={
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        background: "#3E262A",
-        paddingTop: "30px",
-        paddingLeft: "30px",
-        paddingBottom: "30px"
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      background: "#3E262A",
+      paddingTop: "30px",
+      paddingLeft: "30px",
+      paddingBottom: "30px"
     }
     const input={
       width: "25%",

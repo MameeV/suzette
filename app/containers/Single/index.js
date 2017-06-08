@@ -15,6 +15,7 @@
  import FacebookIcon from 'react-icons/lib/fa/facebook';
  import TwitterIcon from 'react-icons/lib/fa/twitter';
  import LinkedinIcon from 'react-icons/lib/fa/linkedin';
+ import FlatButton from 'material-ui/FlatButton';
 
  export default class Single extends React.PureComponent {
    constructor(props){
@@ -35,6 +36,23 @@
          article:json
        })
      }.bind(this))
+   }
+
+   deleteArticle=(id)=>{
+     fetch('http://mrsverbeck.com/api/deleteArticle'+id,{
+       headers:{"Authorization":"Bearer "+this.state.token},
+       method:"POST"
+     })
+     .then(function(res){
+       return res.json();
+     })
+     .then(function(json){
+       if(json.success){
+         alert(json.success)
+       }else if(json.error){
+         alert(json.error)
+       }
+     })
    }
 
   render() {
@@ -77,29 +95,41 @@
       alignSelf: "center",
     }
     const footerContainer={
-        background: "#B4938C",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        fontFamily: "Raleway",
-        fontWeight: "Regular",
-        color: "#74D1EA",
-        fontSize: "14px",
-        paddingTop: "10px",
-        paddingLeft: "20px",
-        paddingBottom: "5px"
+      background: "#B4938C",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      fontFamily: "Raleway",
+      fontWeight: "Regular",
+      color: "#74D1EA",
+      fontSize: "14px",
+      paddingTop: "10px",
+      paddingLeft: "20px",
+      paddingBottom: "5px"
     }
     const iconContainer={
-        background: "#B4938C",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "flex-end"
+      background: "#B4938C",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-end"
     }
     const icon={
-        width: "40px",
-        height: "auto",
-        color: "#74D1EA"
+      width: "40px",
+      height: "auto",
+      color: "#74D1EA"
     }
+    const articleDelete={
+      background: "#CA4046",
+      position: "fixed",
+      top: "300px",
+      right: "10px",
+      borderRadius: "50px",
+      fontFamily: "Raleway",
+      fontWeight: "Bold",
+      fontStyle: "Italic",
+      fontSize: "100%",
+      color: "#74D1EA",
+  }
 
     return (
       <div>
@@ -129,6 +159,7 @@
             <a href="http://www.linkedin.com/in/suzette-verbeck-a609bb44" target="_blank" style={icon}>
               <LinkedinIcon/>
             </a>
+            <FlatButton style={articleDelete} label="Delete Article!"  onTouchTap={()=>this.deleteArticle(this.state.article.id)}/>
           </div>
         </footer>
       </div>

@@ -103,14 +103,15 @@ class NavMobile extends React.PureComponent {
       )
     }
   }
+
   render() {
     const topBurger={
       background: "#B4938C"
     }
-
     const drawerStyle={
       background: "#FAE0EE"
     }
+    
     return (
       <div>
         <nav>

@@ -17,6 +17,7 @@ export default class Access extends React.PureComponent {
       token: "",
     }
   }
+  
   handleEmail = (event) => {
     this.setState({
       email: event.target.value

@@ -16,7 +16,6 @@ import MessageButton from 'components/MessageButton';
 import NavBar from 'components/NavBar';
 import NavMobile from 'components/NavMobile';
 
-
 export default class Home extends React.PureComponent {
 
   render() {
@@ -88,11 +87,9 @@ export default class Home extends React.PureComponent {
       margin: "15px"
     }
 
-
     return (
 
       <div>
-
         <Helmet title="Home" meta={[{ name: 'MrsVerbeck.com', content: 'Who Is Mrs. Verbeck?' }]}/>
         <header>
           <span style={titleStyle}>
@@ -130,9 +127,7 @@ export default class Home extends React.PureComponent {
         </Responsive>
 
         <Responsive maxDeviceWidth={1023}>
-
           <NavMobile active={1}/>
-
           <main style={mainStyle}>
             <div style={bodyStyleMobile}>
               <div style={indentStyle}>
