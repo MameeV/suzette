@@ -6,7 +6,6 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import MessageButton from 'components/MessageButton';
 
 export default class Enroll extends React.PureComponent {
   constructor(props){
@@ -165,7 +164,7 @@ export default class Enroll extends React.PureComponent {
         <br/>
         You can expect a reply, to your email address, within 24 to 48 hours. </div>
         </main>
-        <MessageButton/>
+
       </div>
     );
   }

@@ -8,7 +8,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from "react-router";
 import NavMobile from 'components/NavMobile';
-import MessageButton from 'components/MessageButton';
 import Responsive from 'react-responsive';
 
 export default class Articles extends React.PureComponent {
@@ -197,7 +196,7 @@ export default class Articles extends React.PureComponent {
           </div>
         </main>
       </Responsive>
-      <MessageButton/>
+
       </div>
     );
   }

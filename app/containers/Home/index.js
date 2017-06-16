@@ -12,7 +12,6 @@ import IconButton from 'material-ui/IconButton';
 import Burger from 'material-ui/svg-icons/Navigation/menu';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import MessageButton from 'components/MessageButton';
 import NavBar from 'components/NavBar';
 import NavMobile from 'components/NavMobile';
 
@@ -91,7 +90,9 @@ export default class Home extends React.PureComponent {
 
       <div>
         <Helmet title="Home" meta={[{ name: 'MrsVerbeck.com', content: 'Who Is Mrs. Verbeck?' }]}/>
-        <header>
+
+      <Responsive minDeviceWidth={1024}>
+      <header>
           <span style={titleStyle}>
             <img style={animeStyle} src="http://h4z.it/Image/7a075b_IMG_0630.JPG"/>
           <div style={headingStyle}>
@@ -99,8 +100,6 @@ export default class Home extends React.PureComponent {
           </div>
           </span>
         </header>
-
-        <Responsive minDeviceWidth={1024}>
           <main style={mainStyle}>
             <NavBar activeItem="1"/>
             <div style={bodyStyle}>
@@ -108,10 +107,10 @@ export default class Home extends React.PureComponent {
                 My name is Suzette. I am a wife, mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our community. Professionally I strive to help improve healthcare.
               <br/>
               <br/>
-                  Please check out my Blog page to see the articles I have written.
+                  Please check out the Blog page to see articles I have written.
               <br/>
               <br/>
-                  On my Links page, I compiled some interesting websites with links.
+                  On the Links page, I compiled some interesting websites with links.
               <br/>
                 <img style={mainphotoStyle} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>
@@ -127,6 +126,15 @@ export default class Home extends React.PureComponent {
         </Responsive>
 
         <Responsive maxDeviceWidth={1023}>
+          <header>
+            <span style={titleStyle}>
+              <img style={animeStyle} src="http://h4z.it/Image/7a075b_IMG_0630.JPG"/>
+            <div style={headingStyle}>
+              Hello!
+            </div>
+            </span>
+          </header>
+
           <NavMobile active={1}/>
           <main style={mainStyle}>
             <div style={bodyStyleMobile}>
@@ -134,10 +142,10 @@ export default class Home extends React.PureComponent {
                 My name is Suzette. I am a wife, mother, registered nurse, certified case manager, entrepreneur and tech gadget lover. My Husband and I are passionate about supporting artists in our community. Professionally I strive to help improve healthcare.
               <br/>
               <br/>
-                Please check out my Blog page to see the articles I have written.
-              <br/>
-              <br/>
-                On my Links page, I compiled some interesting websites with links.
+                Please check out the Blog page to see articles I have written.
+            <br/>
+            <br/>
+                On the Links page, I compiled some interesting websites with links.
               <br/>
                 <img style={mainphotoStyleMobile} src="http://h4z.it/Image/162d37_IMG_0492.JPG"/>
               <br/>
@@ -151,8 +159,6 @@ export default class Home extends React.PureComponent {
             </div>
           </main>
         </Responsive>
-
-        <MessageButton/>
 
       </div>
     );

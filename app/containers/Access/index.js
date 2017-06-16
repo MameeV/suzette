@@ -6,7 +6,6 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import MessageButton from 'components/MessageButton';
 
 export default class Access extends React.PureComponent {
   constructor(props){
@@ -17,7 +16,7 @@ export default class Access extends React.PureComponent {
       token: "",
     }
   }
-  
+
   handleEmail = (event) => {
     this.setState({
       email: event.target.value
@@ -159,7 +158,7 @@ export default class Access extends React.PureComponent {
         <br/>
         You can expect a reply, to your email address, within 24 to 48 hours. </div>
         </main>
-        <MessageButton/>
+
       </div>
     );
   }

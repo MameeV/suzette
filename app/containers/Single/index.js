@@ -10,7 +10,6 @@
  import Burger from 'material-ui/svg-icons/Navigation/menu';
  import Drawer from 'material-ui/Drawer';
  import MenuItem from 'material-ui/MenuItem';
- import MessageButton from 'components/MessageButton';
  import NavMobile from 'components/NavMobile';
  import FacebookIcon from 'react-icons/lib/fa/facebook';
  import TwitterIcon from 'react-icons/lib/fa/twitter';

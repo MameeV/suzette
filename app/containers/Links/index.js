@@ -8,7 +8,6 @@
  import Helmet from 'react-helmet';
  import {Link} from "react-router";
  import NavMobile from 'components/NavMobile';
- import MessageButton from 'components/MessageButton';
  import Responsive from 'react-responsive';
 
  export default class Articles extends React.PureComponent {
@@ -32,9 +31,24 @@
      textAlign: "center",
      paddingTop: "10px"
    }
+   const mainBody={
+     background: "#FAE0EE",
+     width: "100%",
+     height: "100vh",
+   }
    const resourceContainer={
      display: "flex",
      flexDirection: "row",
+     flexWrap: "wrap",
+     width: "100%",
+     maxWidth: "1000px",
+     justifyContent: "space-around",
+     background: "#FAE0EE",
+     margin: "0 auto",
+   }
+   const resourceContainerMobile={
+     display: "flex",
+     flexDirection: "column",
      flexWrap: "wrap",
      width: "100%",
      maxWidth: "1000px",
@@ -47,6 +61,12 @@
      display: "flex",
      flexDirection: "column",
      alignSelf: "end"
+   }
+   const resourceMobile={
+     width: "100%",
+     display: "flex",
+     flexDirection: "column",
+     alignSelf: "center"
    }
    const resourceImage={
      width: "100%",
@@ -100,51 +120,94 @@
    }
 
    return (
-     <div>
-       <Helmet title="Links" meta={[ { name: 'description', content: 'Website Resources and Links' }]}/>
-       <div style={headTextStyle}>
+    <div>
+      <Helmet title="Links" meta={[ { name: 'description', content: 'Website Resources and Links' }]}/>
+      <div style={headTextStyle}>
          Resource Links
-       </div>
-       <main>
-         <NavMobile active={3}/>
-           <div style={resourceContainer}>
-             <div style={resource}>
-                <img style={resourceImage}
-                src="https://media.licdn.com/media/AAEAAQAAAAAAAAc1AAAAJGQ5ZWNmZDE4LWZmYzItNDllNy1iODcyLTU5MjZhNDAwNGMwOQ.png"/>
-               <div style={resourceTitle}>
-               Here's the Link to My Husband's Blog
-               </div>
-               <div style={resourceBody}>
-               <a href="https://markverbeck.wordpress.com" target="_blank" style={linkStyle}>
-                  Go To Website <span style={arrowStyle}> &#10173; </span>
-                </a>
-               </div>
+      </div>
+
+      <main style={mainBody}>
+        <NavMobile active={3}/>
+
+        <Responsive minDeviceWidth={1024}>
+          <div style={resourceContainer}>
+           <div style={resource}>
+              <img style={resourceImage}
+              src="https://media.licdn.com/media/AAEAAQAAAAAAAAc1AAAAJGQ5ZWNmZDE4LWZmYzItNDllNy1iODcyLTU5MjZhNDAwNGMwOQ.png"/>
+             <div style={resourceTitle}>
+             Here's the Link to My Husband's Blog
              </div>
-             <div style={resource}>
-               <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
-               <div style={resourceTitle}>
-               Visit My Medical Advocacy Partners Website!
-               </div>
-               <div style={resourceBody}>
-               <a href="http://medicaladvocacypartners.com" target="_blank" style={linkStyle}>
-                  Go To Website <span style={arrowStyle}> &#10173; </span>
-                </a>
-               </div>
-             </div>
-             <div style={resource}>
-               <img style={resourceImage2} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
-               <div style={resourceTitle}>
-               Check Out the Collectors Corner at Wolf and Finch
-               </div>
-               <div style={resourceBody}>
-               <a href="https://wolfandfinch.com/blogs/news/collector" target="_blank" rel="nofollow" style={linkStyle}>
-                  Go To Website <span style={arrowStyle}> &#10173; </span>
-                </a>
-               </div>
+             <div style={resourceBody}>
+             <a href="https://markverbeck.wordpress.com" target="_blank" style={linkStyle}>
+                Go To Website <span style={arrowStyle}> &#10173; </span>
+              </a>
              </div>
            </div>
-         <MessageButton/>
-       </main>
+           <div style={resource}>
+             <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
+             <div style={resourceTitle}>
+             Visit My Medical Advocacy Partners Website!
+             </div>
+             <div style={resourceBody}>
+             <a href="http://medicaladvocacypartners.com" target="_blank" style={linkStyle}>
+                Go To Website <span style={arrowStyle}> &#10173; </span>
+              </a>
+             </div>
+           </div>
+           <div style={resource}>
+             <img style={resourceImage2} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
+             <div style={resourceTitle}>
+             Check Out the Collectors Corner at Wolf and Finch
+             </div>
+             <div style={resourceBody}>
+             <a href="https://wolfandfinch.com/blogs/news/collector" target="_blank" rel="nofollow" style={linkStyle}>
+                Go To Website <span style={arrowStyle}> &#10173; </span>
+              </a>
+             </div>
+           </div>
+         </div>
+       </Responsive>
+
+       <Responsive maxDeviceWidth={1023}>
+         <div style={resourceContainerMobile}>
+          <div style={resourceMobile}>
+             <img style={resourceImage}
+             src="https://media.licdn.com/media/AAEAAQAAAAAAAAc1AAAAJGQ5ZWNmZDE4LWZmYzItNDllNy1iODcyLTU5MjZhNDAwNGMwOQ.png"/>
+            <div style={resourceTitle}>
+            Here's the Link to My Husband's Blog
+            </div>
+            <div style={resourceBody}>
+            <a href="https://markverbeck.wordpress.com" target="_blank" style={linkStyle}>
+               Go To Website <span style={arrowStyle}> &#10173; </span>
+             </a>
+            </div>
+          </div>
+          <div style={resourceMobile}>
+            <img style={resourceImage} src="http://h4z.it/Image/a5823c_MAP.jpg"/>
+            <div style={resourceTitle}>
+            Visit My Medical Advocacy Partners Website!
+            </div>
+            <div style={resourceBody}>
+            <a href="http://medicaladvocacypartners.com" target="_blank" style={linkStyle}>
+               Go To Website <span style={arrowStyle}> &#10173; </span>
+             </a>
+            </div>
+          </div>
+          <div style={resourceMobile}>
+            <img style={resourceImage2} src="http://h4z.it/Image/a51170_logo2lg_75x.png"/>
+            <div style={resourceTitle}>
+            Check Out the Collectors Corner at Wolf and Finch
+            </div>
+            <div style={resourceBody}>
+            <a href="https://wolfandfinch.com/blogs/news/collector" target="_blank" rel="nofollow" style={linkStyle}>
+               Go To Website <span style={arrowStyle}> &#10173; </span>
+             </a>
+            </div>
+          </div>
+        </div>
+      </Responsive>
+
+      </main>
      </div>
     );
   }
